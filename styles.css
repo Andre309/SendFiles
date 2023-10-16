@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./img/12.jpg);
+  background-size: cover;
+}
+
+/*.container-item {
+  margin: 20px;
+  border-radius: 30px;
+  background-color: aqua;
+}*/
+
+#container {
+  text-align: center;
+}
+
+#uploadButton {
+  padding: 20px;
+  background-color: dodgerblue;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.upload-text {
+  font-family: sans-serif;
+  margin-left: 10px;
+  font-size: 40px;
+}
+
+#sendButton {
+  display: none;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: green;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #fff;
+}
