@@ -10,7 +10,7 @@ fileInput.addEventListener('change', () => {
   if (fileInput.files.length > 0) {
     sendButton.style.display = 'block';
   } else {
-    sendButton.style.display = 'hidden';
+    sendButton.style.display = 'none';
   }
 });
 
@@ -29,3 +29,4 @@ sendButton.addEventListener('click', () => {
       alert('Завантажте файл');
     }
   });
+  
