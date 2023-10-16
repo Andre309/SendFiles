@@ -10,16 +10,22 @@ fileInput.addEventListener('change', () => {
   if (fileInput.files.length > 0) {
     sendButton.style.display = 'block';
   } else {
-    sendButton.style.display = 'none';
+    sendButton.style.display = 'hidden';
   }
 });
 
 sendButton.addEventListener('click', () => {
-  if (fileInput.files.length > 0) {
-    // Логіка відправлення файла на поштову скриньку
-    // В цьому місці можна додати код для відправлення пошти
-    alert('Ваш файл відправлено');
-  } else {
-    alert('Завантажте файл');
-  }
-});
+    if (fileInput.files.length > 0) {
+      const blob = fileInput.files[0];
+      const a = document.createElement('a');
+      const url = window.URL.createObjectURL(blob);
+      a.href = url;
+      a.download = blob.name;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } else {
+      alert('Завантажте файл');
+    }
+  });
